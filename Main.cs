@@ -23,7 +23,12 @@ namespace Library
             dgwBookType.DataSource = bookTypeDal.GetAll();
             BookDal bookDal = new BookDal();
             dgwBooks.DataSource = bookDal.GetAll();
-
+            dgwBooks.Columns[0].HeaderText = "Id"; // dgwBook datagridview'in columns listesinin 0. elemanının user tarafından görüntüsünü değiştirdik.
+            dgwBooks.Columns[1].HeaderText = "Kitap Adı";
+            dgwBooks.Columns[2].HeaderText = "Sayfa Sayısı";
+            dgwBooks.Columns[3].HeaderText = "Yazar Adı";
+            dgwBooks.Columns[4].HeaderText = "Konusu";
+            dgwBooks.Columns[5].HeaderText = "Tür Id";
             dgwDeneme.Columns.Add("ID", "ID"); // ilk parametre kolon adı , ikinci parametre user'İn gördüğü kolon adı -> kolon ekledik
             dgwDeneme.Columns.Add("Kitap", "Kitap");
             dgwDeneme.Columns.Add("Yazar", "Yazar");
